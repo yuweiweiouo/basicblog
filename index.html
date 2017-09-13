@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<link rel="stylesheet" href="https://unpkg.com/purecss@1.0.0/build/pure-min.css" integrity="sha384-nn4HPE8lTHyVtfCBi5yW9d20FjT8BJwUXyWZT9InLYax14RDjBj46LmSztkmNP9w" crossorigin="anonymous">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" type="text/css" href="style.css">
+	<script type="Text/JavaScript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.6/jquery.min.js"></script>	
+	<script src="./js/ripple.js"></script>    
+	<title>blog</title>
+</head>
+<body>
+	<div>
+		<div class="header">
+			<div class="bar">
+				<div class="bar-left">
+					<div id="blog">YUWEIWEI 's Blog</div>
+				</div>
+				<div class="bar-right">
+					<div class="menu">
+						<img src="./img/home.png">
+						Home
+					</div>
+					<div class="menu">
+						<img src="./img/about.png">
+						About
+					</div>
+				</div>
+			</div>
+			<div class="header-txt">
+				<div class="header-photo"><img src="./img/me.png" id="photo"></div>
+				<div class="header-txt-1">YUWEIWEI 's Blog</div>
+				<div class="header-txt-2">一位咖哩的追隨者</div>
+				<div class="header-icon">
+					<img src="./img/fb.png" id="fb">
+					<img src="./img/github.png" id="git">
+				</div>
+			</div>
+			<div class="search"><img src="./img/search.png"></div>
+		</div>
+		<div class="body">
+			<div class="article">
+				<div class="article-title">
+					<div class="article-title-icon">
+						<img src="./img/title.png">						
+					</div>
+					<div class="article-title-txt">						
+						今天早餐ㄘ什麼				
+					</div>
+				</div>
+				<div class="article-content">										
+				</div>
+				<div class="article-bottom">
+					<div class="article-bottom-l">
+						<img src="./img/calendar.png">
+						2017-09-13
+					</div>	
+					<div class="article-bottom-r">
+						<img src="./img/more.png">
+					</div>					
+				</div>
+			</div>
+		</div>
+
+		<div class="footer">
+		</div>
+	</div>
+</body>
+<script type="text/javascript">
+	$( document ).ready(function() {
+		$("#fb").mouseenter(function(){
+			$(this).attr("src", "./img/fb1.png");
+		});
+		$("#fb").mouseleave(function(){
+			$(this).attr("src", "./img/fb.png");
+		});
+
+		$("#git").mouseenter(function(){
+			$(this).attr("src", "./img/github1.png");
+		});
+		$("#git").mouseleave(function(){
+			$(this).attr("src", "./img/github.png");
+		});
+
+		$(".menu").mouseenter(function(){
+			$(this).animate({
+				letterSpacing:"0.06em"
+			}, 100);
+		});
+		$(".menu").mouseleave(function(){
+			$(this).animate({
+				letterSpacing:"-0.06em"
+			}, 100);
+		});
+
+		$("#blog").mouseenter(function(){
+			$(this).animate({
+				letterSpacing:"0.06em"
+			}, 100);
+		});
+		$("#blog").mouseleave(function(){
+			$(this).animate({
+				letterSpacing:"-0.06em"
+			}, 100);
+		});
+	});
+	
+</script>
+</html>
