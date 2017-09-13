@@ -1,21 +1,24 @@
-@import url('https://fonts.googleapis.com/css?family=Roboto');
+@import url('https://fonts.googleapis.com/css?family=Gloria+Hallelujah|Nunito');
 
 *{
-	font-family: 'Roboto', sans-serif;
-	box-sizing: border-box;
+	box-sizing: border-box;	
 }
 
+.snow{position:absolute;top:0;color:#fff;}
+
 .header{
+	font-family: 'Gloria Hallelujah', cursive;
 	width: 100%;
-	background-image:url(./img/mountain1.jpg);
+	background-image:url(img/mountain1.jpg);
 	background-size: cover;
-	height: 35em;
+	height: 25em;
 	object-fit:cover;
+	box-shadow:0 0 20px 5px rgba(255,255,255,.7) inset;
 }
 
 .bar{
 	background: linear-gradient(180deg, transparent, rgba(250, 250, 250, 0.3));
-	height: 4em;
+	height: 3em;
 	width: 100%;	
 	display: inline-block;
 }
@@ -25,9 +28,8 @@
 	height: 100%;
 	float:left;	
 	display: inline-block;
-	padding-left: 4em;
-	padding-top: 0.6em;
-	font-size: 1.8em;	
+	padding-left: 3em;
+	font-size: 1.7em;	
 }
 
 .bar-right{
@@ -36,8 +38,7 @@
 	float: right;
 	display: inline-block;
 	padding-right: 4em;
-	padding-top: 0.6em;
-	font-size: 1.6em;	
+	font-size: 1.4em;	
 	text-align: right;
 }
 
@@ -53,38 +54,41 @@
 }
 
 .header-txt{	
-	text-align: center;
+	text-align: center;	
+	font-family: 'Nunito', sans-serif;
 }
 
 .header-photo img{	
-	height: 10em;
-	width: 10em;
+	height: 7em;
+	width: 7em;
 }
 
 .header-txt-1{
-	font-size: 4em;
+	font-size: 2.5em;
 }
 
 .header-txt-2{
-	font-size: 3em;
+	font-size: 2.5em;
+	font-family:DFKai-sb;
 }
 
 .header-icon{
-	padding-top: 4em;
+	padding-top: 2em;
 }
 
 .header-icon img{
-	height: 4em;
-	width: 4em;
+	height: 3em;
+	width: 3em;
 	margin-right: 1em; 
 }
 
 .search img{
+	display: inline-block;
 	position: fixed;
-	top: 18em;
-	right: 5em;
-	height: 5em;
-	width: 5em;
+	top: 15em;
+	right: 4em;
+	height: 4em;
+	width: 4em;
 }
 
 .body{
@@ -92,15 +96,21 @@
 	width: 100%;
 	height: 100em;
 	padding-top: 5em;
+	font-family:DFKai-sb;
+	clear:both;
+	margin:0 auto;
+	position:relative;
+	overflow:hidden;
 }
 
 .article{
-	width: 80%;
-	height: 40em;
+	width: 70%;
+	height: 20em;
 	background-color: white;
 	margin-bottom: 5em;
 	margin-left: auto;
-	margin-right: auto;
+	margin-right: auto;	
+	box-shadow:0 0 30px 10px rgba(255,255,255,.7);
 }
 
 .article-title{
@@ -109,13 +119,13 @@
 }
 
 .article-title-icon{
-	padding-top: 2em;
+	padding-top: 0.5em;
 	float: left;
 }
 
 .article-title-txt{
-	padding-top: 1em;
-	font-size: 2.5em;
+	padding-top: 0.6em;
+	font-size: 1.8em;
 	float: left;
 }
 
@@ -128,13 +138,13 @@
 .article-bottom{
 	height: 20%;
 	width: 100%;
-	padding-top: 3em;
+	padding-top: 1.2em;
 }
 
 .article-bottom-l{	
 	padding-left: 1em;
 	float: left;
-	font-size: 2em;
+	font-size: 1.5em;
 }
 
 .article-bottom-l img{

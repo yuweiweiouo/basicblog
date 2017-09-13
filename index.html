@@ -6,7 +6,6 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="stylesheet" type="text/css" href="style.css">
 	<script type="Text/JavaScript" src="./js/jquery-3.2.1.min.js"></script>	
-	<script src="./js/ripple.js"></script>    
 	<title>blog</title>
 </head>
 <body>
@@ -14,7 +13,7 @@
 		<div class="header">
 			<div class="bar">
 				<div class="bar-left">
-					<div id="blog">YUWEIWEI 's Blog</div>
+					<div class="blog">YUWEIWEI 's Blog</div>
 				</div>
 				<div class="bar-right">
 					<div class="menu">
@@ -29,7 +28,7 @@
 			</div>
 			<div class="header-txt">
 				<div class="header-photo"><img src="./img/me.png" id="photo"></div>
-				<div class="header-txt-1">YUWEIWEI 's Blog</div>
+				<div class="header-txt-1 blog">YUWEIWEI 's Blog</div>
 				<div class="header-txt-2">一位咖哩的追隨者</div>
 				<div class="header-icon">
 					<img src="./img/fb.png" id="fb">
@@ -93,12 +92,23 @@
 			}, 100);
 		});
 
-		$("#blog").mouseenter(function(){
+		$("#photo").mouseenter(function(){
+			$(this).animate({
+				opacity:'0.8'
+			}, 100);
+		});
+		$("#photo").mouseleave(function(){
+			$(this).animate({
+				opacity:'1'
+			}, 100);
+		});
+
+		$(".blog").mouseenter(function(){
 			$(this).animate({
 				letterSpacing:"0.06em"
 			}, 100);
 		});
-		$("#blog").mouseleave(function(){
+		$(".blog").mouseleave(function(){
 			$(this).animate({
 				letterSpacing:"-0.06em"
 			}, 100);
@@ -106,4 +116,5 @@
 	});
 	
 </script>
+<script type="text/javascript" src="js/snow.js"></script>
 </html>
