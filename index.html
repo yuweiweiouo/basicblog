@@ -5,6 +5,7 @@
 	<link rel="stylesheet" href="https://unpkg.com/purecss@1.0.0/build/pure-min.css" integrity="sha384-nn4HPE8lTHyVtfCBi5yW9d20FjT8BJwUXyWZT9InLYax14RDjBj46LmSztkmNP9w" crossorigin="anonymous">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="stylesheet" type="text/css" href="style.css">
+	<link rel="stylesheet" type="text/css" href="css/about.css">
 	<script type="Text/JavaScript" src="./js/jquery-3.2.1.min.js"></script>	
 	<title>blog</title>
 </head>
@@ -21,7 +22,11 @@
 						Home
 					</div>
 					<div class="menu">
-						<img src="./img/about.png">
+						<img src="./img/album.png">
+						Album
+					</div>
+					<div class="menu">
+						<img src="./img/profile.png">
 						About
 					</div>
 				</div>
@@ -39,68 +44,78 @@
 			</div>
 		</div>
 		<div class="body">
-			<div class="article">
-				<div class="article-title">
-					<div class="article-title-icon">
-						<img src="./img/title.png">						
+			<div class="page -home">
+				<div class="article">
+					<div class="article-title">
+						<div class="article-title-icon">
+							<img src="./img/title.png">						
+						</div>
+						<div class="article-title-txt">						
+							今天早餐ㄘ什麼				
+						</div>
 					</div>
-					<div class="article-title-txt">						
-						今天早餐ㄘ什麼				
+					<div class="article-content">										
+					</div>
+					<div class="article-bottom">
+						<div class="article-bottom-l">
+							<img src="./img/calendar.png">
+							2017-09-13
+						</div>	
+						<div class="article-bottom-r">
+							<img src="./img/more.png">
+						</div>					
 					</div>
 				</div>
-				<div class="article-content">										
+
+				<div class="article">
+					<div class="article-title">
+						<div class="article-title-icon">
+							<img src="./img/title.png">						
+						</div>
+						<div class="article-title-txt">						
+							那午餐呢?				
+						</div>
+					</div>
+					<div class="article-content">										
+					</div>
+					<div class="article-bottom">
+						<div class="article-bottom-l">
+							<img src="./img/calendar.png">
+							2017-09-14
+						</div>	
+						<div class="article-bottom-r">
+							<img src="./img/more.png">
+						</div>					
+					</div>
 				</div>
-				<div class="article-bottom">
-					<div class="article-bottom-l">
-						<img src="./img/calendar.png">
-						2017-09-13
-					</div>	
-					<div class="article-bottom-r">
-						<img src="./img/more.png">
-					</div>					
+
+				<div class="article">
+					<div class="article-title">
+						<div class="article-title-icon">
+							<img src="./img/title.png">						
+						</div>
+						<div class="article-title-txt">						
+							好啦晚餐吃咖哩				
+						</div>
+					</div>
+					<div class="article-content">										
+					</div>
+					<div class="article-bottom">
+						<div class="article-bottom-l">
+							<img src="./img/calendar.png">
+							2017-09-15
+						</div>	
+						<div class="article-bottom-r">
+							<img src="./img/more.png">
+						</div>					
+					</div>
 				</div>
 			</div>
 
-			<div class="article">
-				<div class="article-title">
-					<div class="article-title-icon">
-						<img src="./img/title.png">						
-					</div>
-					<div class="article-title-txt">						
-						那午餐呢?				
-					</div>
-				</div>
-				<div class="article-content">										
-				</div>
-				<div class="article-bottom">
-					<div class="article-bottom-l">
-						<img src="./img/calendar.png">
-						2017-09-14
-					</div>	
-					<div class="article-bottom-r">
-						<img src="./img/more.png">
-					</div>					
-				</div>
-			</div>
+			<div class="page -about">
+				<div class="profile">
+					<div class="profile-txt">	
 
-			<div class="article">
-				<div class="article-title">
-					<div class="article-title-icon">
-						<img src="./img/title.png">						
-					</div>
-					<div class="article-title-txt">						
-						好啦晚餐吃咖哩				
-					</div>
-				</div>
-				<div class="article-content">										
-				</div>
-				<div class="article-bottom">
-					<div class="article-bottom-l">
-						<img src="./img/calendar.png">
-						2017-09-15
-					</div>	
-					<div class="article-bottom-r">
-						<img src="./img/more.png">
 					</div>					
 				</div>
 			</div>
@@ -113,6 +128,9 @@
 </body>
 <script type="text/javascript">
 	$( document ).ready(function() {
+		$(".page -album").hide();
+		$(".page -about").hide();
+
 		$("#fb").mouseenter(function(){
 			$(this).attr("src", "./img/fb1.png");
 		});
@@ -196,9 +214,9 @@
 				}
 			}
 		});
-
 	});
 	
 </script>
 <script type="text/javascript" src="js/snow.js"></script>
+<script type="text/javascript" src="js/switch.js"></script>
 </html>

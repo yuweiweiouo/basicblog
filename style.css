@@ -13,7 +13,7 @@
 	background-size: cover;
 	height: 25em;
 	object-fit:cover;
-	box-shadow:0 0 20px 5px rgba(255,255,255,.7) inset;
+	box-shadow:0 0 1em 0.5em rgba(165, 231, 255,.87) inset;
 }
 
 .bar{
