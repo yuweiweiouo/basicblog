@@ -9,8 +9,21 @@
 		box-shadow:0 0 10px 1px rgba(0,0,0,.2);
 	}
 
-	.profile-txt{
+	.profile-content{
 		height: 100%;
 		width: 100%;
 		background-color: #edeff2;
+		display: inline-block;
+		text-align: center;
+		padding-top: 3em;
+	}
+
+	.profile-photo img{
+		height: 18em;
+		width: 18em;
+	}
+
+	.profile-txt{
+		margin-top: 0.5em;
+		font-size: 4em;
 	}

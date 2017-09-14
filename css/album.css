@@ -1,0 +1,25 @@
+.slideWrapper{
+	height: 100em;
+	width: 49em;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+.slide{
+	width: 15em; 
+	height: 100em;	
+	float: left;
+}
+
+.s2{
+	margin-left: 2em;
+	margin-right: 2em;
+}
+
+.photo img{
+	width: 15em;
+	height: 15em;		
+	margin-bottom: 2em;
+	box-shadow:0 0 10px 1px rgba(0,0,0,.8);
+}
+

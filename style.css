@@ -129,6 +129,20 @@
 	height: 60%;
 	width: 100%;
 	background-color: #edeff2;
+	padding-top: 1em;
+	padding-left: 2em;
+	display: inline-block;
+}
+
+.article-content img{
+	height: 10em;
+	width: 10em;
+	margin-right: 1em;
+	float: left;
+}
+
+.article-content div{
+	font-size: 2em;
 }
 
 .article-bottom{
@@ -162,6 +176,9 @@
 }
 
 .footer{
+	font-family: 'Gloria Hallelujah', cursive;
 	width: 100%;
-	height: 5em;
+	height: 3em;
+	padding-top: 0.5em;
+	text-align: center;
 }
