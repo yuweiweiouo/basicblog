@@ -24,20 +24,20 @@
 }
 
 .bar-left{
-	width: 50%;
+	width: 40%;
 	height: 100%;
 	float:left;	
 	display: inline-block;
-	padding-left: 3em;
-	font-size: 1.7em;	
+	padding-left: 1em;
+	font-size: 1.5em;	
 }
 
 .bar-right{
-	width: 50%;	
+	width: 60%;	
 	height: 100%;
 	float: right;
 	display: inline-block;
-	padding-right: 4em;
+	padding-right: 1em;
 	font-size: 1.4em;	
 	text-align: right;
 }
@@ -95,7 +95,7 @@
 }
 
 .article{
-	width: 70%;
+	width: 50em;
 	height: 20em;
 	background-color: white;
 	margin-bottom: 5em;
@@ -181,4 +181,10 @@
 	height: 3em;
 	padding-top: 0.5em;
 	text-align: center;
+}
+
+@media screen and (min-width: 480px) {
+    body {
+        
+    }
 }

@@ -23,3 +23,10 @@
 	box-shadow:0 0 10px 1px rgba(0,0,0,.8);
 }
 
+@media screen and (min-width: 480px) {
+	    .slide{
+		width: 15em; 
+		height: 100em;	
+	}
+}
+
