@@ -10,8 +10,8 @@
     <link rel="stylesheet" type="text/css" href="css/about.css">
     <script src="https://www.gstatic.com/firebasejs/4.3.1/firebase.js"></script>
     <script type="Text/JavaScript" src="./js/jquery-3.2.1.min.js"></script>
-    <script type="text/javascript" src="./js/db.js"></script>
-    <title>blog</title>
+    <script type="text/javascript" src="./js/loading.js"></script>
+    <title>魚尾尾</title>
 </head>
 
 <body>
@@ -45,79 +45,7 @@
         </div>
     </div>
     <div class="body">
-        <div class="page -home">
-            <div class="article">
-                <div class="article-title">
-                    <div class="article-title-icon">
-                        <img src="./img/title.png">
-                    </div>
-                    <div class="article-title-txt">
-                        今天早餐ㄘ什麼
-                    </div>
-                </div>
-                <div class="article-content">
-                    <img src="photo/breakfast.jpg">
-                    <div class="article-content-txt">
-                        來吃早餐囉
-                    </div>
-                </div>
-                <div class="article-bottom">
-                    <div class="article-bottom-l">
-                        <img src="./img/calendar.png"> 2017-09-13
-                    </div>
-                    <div class="article-bottom-r">
-                        <img src="./img/more.png">
-                    </div>
-                </div>
-            </div>
-            <div class="article">
-                <div class="article-title">
-                    <div class="article-title-icon">
-                        <img src="./img/title.png">
-                    </div>
-                    <div class="article-title-txt">
-                        那午餐呢?
-                    </div>
-                </div>
-                <div class="article-content">
-                    <img src="photo/laman.jpg">
-                    <div class="article-content-txt">
-                        午餐就吃拉麵吧~
-                    </div>
-                </div>
-                <div class="article-bottom">
-                    <div class="article-bottom-l">
-                        <img src="./img/calendar.png"> 2017-09-14
-                    </div>
-                    <div class="article-bottom-r">
-                        <img src="./img/more.png">
-                    </div>
-                </div>
-            </div>
-            <div class="article">
-                <div class="article-title">
-                    <div class="article-title-icon">
-                        <img src="./img/title.png">
-                    </div>
-                    <div class="article-title-txt">
-                        好啦晚餐吃咖哩
-                    </div>
-                </div>
-                <div class="article-content">
-                    <img src="photo/curry.jpg">
-                    <div class="article-title-txt">
-                        歐歐歐歐歐
-                    </div>
-                </div>
-                <div class="article-bottom">
-                    <div class="article-bottom-l">
-                        <img src="./img/calendar.png"> 2017-09-15
-                    </div>
-                    <div class="article-bottom-r">
-                        <img src="./img/more.png">
-                    </div>
-                </div>
-            </div>
+        <div class="page -home">           
         </div>
         <div class="page -album">
             <div class="slideWrapper">
@@ -255,6 +183,10 @@ $(document).ready(function() {
         }
     });
 });
+
+$(".article-title").mouseenter(function(){
+        alert("123");
+    });
 </script>
 <script type="text/javascript" src="js/snow.js"></script>
 <script type="text/javascript" src="js/switch.js"></script>
