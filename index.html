@@ -8,6 +8,7 @@
     <link rel="stylesheet" type="text/css" href="style.css">
     <link rel="stylesheet" type="text/css" href="css/album.css">
     <link rel="stylesheet" type="text/css" href="css/about.css">
+    <link rel="stylesheet" type="text/css" href="css/login.css">
     <script src="https://www.gstatic.com/firebasejs/4.3.1/firebase.js"></script>
     <script type="Text/JavaScript" src="./js/jquery-3.2.1.min.js"></script>
     <script type="text/javascript" src="./js/loading.js"></script>
@@ -45,7 +46,7 @@
         </div>
     </div>
     <div class="body">
-        <div class="page -home">           
+        <div class="page -home">
         </div>
         <div class="page -album">
             <div class="slideWrapper">
@@ -91,6 +92,65 @@
         </div>
     </div>
     <img src="img/top.png" id="top">
+    <div class="login-btn">
+        <img src="./img/login.png">
+    </div>
+    <div class="login-wrap">
+        <div class="login-html">
+            <input id="tab-1" type="radio" name="tab" class="sign-in" checked>
+            <label for="tab-1" class="tab">Sign In</label>
+            <input id="tab-2" type="radio" name="tab" class="sign-up">
+            <label for="tab-2" class="tab">Sign Up</label>
+            <div class="login-form">
+                <div class="sign-in-htm">
+                    <div class="group">
+                        <label for="user" class="label">Username</label>
+                        <input id="user" type="text" class="input account">
+                    </div>
+                    <div class="group">
+                        <label for="pass" class="label">Password</label>
+                        <input id="pass" type="password" class="input password" data-type="password">
+                    </div>
+                    <div class="group">
+                        <input id="check" type="checkbox" class="check" checked>
+                        <label for="check"><span class="icon"></span> Keep me Signed in</label>
+                    </div>
+                    <div class="group">
+                        <input type="submit" class="button signInBtn" value="Sign In">
+                    </div>
+                    <div class="hr"></div>
+                    <div class="foot-lnk">
+                        <a href="#forgot">Forgot Password?</a>
+                    </div>
+                </div>
+                <div class="sign-up-htm">
+                    <div class="group">
+                        <label for="user" class="label">Username</label>
+                        <input id="user" type="text" class="input">
+                    </div>
+                    <div class="group">
+                        <label for="pass" class="label">Password</label>
+                        <input id="pass" type="password" class="input" data-type="password">
+                    </div>
+                    <div class="group">
+                        <label for="pass" class="label">Repeat Password</label>
+                        <input id="pass" type="password" class="input" data-type="password">
+                    </div>
+                    <div class="group">
+                        <label for="pass" class="label">Email Address</label>
+                        <input id="pass" type="text" class="input">
+                    </div>
+                    <div class="group">
+                        <input type="submit" class="button" value="Sign Up">
+                    </div>
+                    <div class="hr"></div>
+                    <div class="foot-lnk">
+                        <label for="tab-1">Already Member?</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
     <div class="footer">
         ©Powered by yuweiwei
     </div>
@@ -171,6 +231,21 @@ $(document).ready(function() {
         $("body").animate({ scrollTop: 0 }, 600);
     });
 
+    $(".login-btn").click(function() {
+        $(".login-wrap").toggle("fast");
+    });
+
+    $(".signInBtn").click(function(){
+        var user = {
+            account: $(".account").val(),
+            pwd: $(".password").val()
+        }
+        $(".input").val("");
+        $(".login-wrap").hide("fast");
+        login(user);
+        
+    });
+
     var topScrollpos = 0;
     $(window).scroll(function() {
         var curScrollPos = $(this).scrollTop();
@@ -183,10 +258,6 @@ $(document).ready(function() {
         }
     });
 });
-
-$(".article-title").mouseenter(function(){
-        alert("123");
-    });
 </script>
 <script type="text/javascript" src="js/snow.js"></script>
 <script type="text/javascript" src="js/switch.js"></script>
