@@ -172,7 +172,8 @@
 	height: 3em;
 	width: 3em;
 	bottom: 5em;
-	right: 3em;
+	right: 3em;	
+	display: none;
 }
 
 .footer{
