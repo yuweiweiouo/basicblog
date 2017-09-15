@@ -63,13 +63,3 @@ function loadArticle() {
 }
 
 loadArticle();
-
-function login(user) {
-	localStorage.setItem('Login','true');
-    firebase.auth().signInWithEmailAndPassword(user.account, user.pwd).catch(function(error) {
-        var errorCode = error.code;
-        var errorMessage = error.message;
-        alert("登入失敗:" + errorCode + "\n訊息:" + errorMessage);
-        localStorage.setItem('Login','false');
-    });
-}
