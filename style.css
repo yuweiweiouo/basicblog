@@ -85,7 +85,7 @@
 .body{
 	background-color: #a5e7ff;
 	width: 100%;
-	height: 100em;
+	height: auto;
 	padding-top: 5em;
 	font-family:DFKai-sb;
 	clear:both;
@@ -183,8 +183,21 @@
 	text-align: center;
 }
 
-@media screen and (min-width: 480px) {
-    body {
-        
-    }
+@media screen and (max-width: 1000px){	
+	*{
+		font-size: 0.9em;
+	}
+
+	.bar-left{
+		width: 30%;
+		padding-top: 0.5em;
+		padding-left: 0em;
+		font-size: 1.2em;
+	}
+
+	.bar-right{
+		width: 70%;
+		padding-right: 0em;
+	}
+
 }
