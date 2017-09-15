@@ -178,9 +178,9 @@
 .footer{
 	font-family: 'Gloria Hallelujah', cursive;
 	width: 100%;
-	height: 3em;
-	padding-top: 0.5em;
+	height: 1em;
 	text-align: center;
+	display: inline-block;
 }
 
 @media only screen and (max-width : 768px){	
@@ -202,6 +202,10 @@
 
 	.article{
 		width: 90%;
+	}
+
+	.article-bottom-r img{
+		height: 2em;
 	}
 
 }
