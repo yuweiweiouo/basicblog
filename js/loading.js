@@ -71,7 +71,10 @@ function sendMsg(msgPackage) {
     	user: msgPackage.user,
         content: msgPackage.txt,
         time: today.getHours() + ":" + today.getMinutes()
-    });
+    },function(err){
+    	if(err){
+    	$("#txtbox").append("----留言失敗,請重新整理頁面----\n");}
+    })
 };
 
 chatRef.on('value', function(snapshot) {

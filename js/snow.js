@@ -1,14 +1,10 @@
  //❅✿❤
- console.log("可輸入指令         --請先開起雪花飄功能");
- console.log("pattern = snow    --預設");
- console.log("        = flower  --下花花");
- console.log("        = love    --愛心雨");
- console.log("        = note    --音符");
- console.log("        = sun     --太陽下凡");
- console.log("        = star    --流星雨");
+ console.log("在聊天室留言以下單字可開啟彩蛋");
+ console.log("snow\nflower\nlove\nnote\nsun\nstar")
+
+ var snow = "❅";
  var flower = "✿";
  var love = "❤";
- var snow = "❅";
  var sun = "☀";
  var note = "♪";
  var star = "★";

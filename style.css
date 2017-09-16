@@ -1,282 +1,295 @@
 @import url('https://fonts.googleapis.com/css?family=Gloria+Hallelujah|Nunito');
 
-*{
-	box-sizing: border-box;	
+* {
+    box-sizing: border-box;
 }
 
-.snow{position:absolute;top:0;color:#fff;}
-
-.header{
-	font-family: 'Gloria Hallelujah', cursive;
-	width: 100%;
-	background-image:url(img/mountain1.jpg);
-	background-size: cover;
-	height: 25em;
-	object-fit:cover;
-	box-shadow:0 0 1em 0.5em rgba(165, 231, 255,.87) inset;
-	text-align: center;
+.snow {
+    position: absolute;
+    top: 0;
+    color: #fff;
 }
 
-.bar{
-	background: linear-gradient(180deg, transparent, rgba(250, 250, 250, 0.3));
-	height: 3em;
-	width: 100%;	
-	display: inline-block;
+.header {
+    font-family: 'Gloria Hallelujah', cursive;
+    width: 100%;
+    background-image: url(img/mountain1.jpg);
+    background-size: cover;
+    height: 25em;
+    object-fit: cover;
+    box-shadow: 0 0 1em 0.5em rgba(165, 231, 255, .87) inset;
+    text-align: center;
 }
 
-.bar-left{
-	width: 40%;
-	height: 100%;
-	float:left;	
-	display: inline-block;
-	padding-left: 1em;
-	font-size: 1.5em;	
+.bar {
+    background: linear-gradient(180deg, transparent, rgba(250, 250, 250, 0.3));
+    height: 3em;
+    width: 100%;
+    display: inline-block;
 }
 
-.bar-right{
-	width: 60%;	
-	height: 100%;
-	float: right;
-	display: inline-block;
-	padding-right: 1em;
-	font-size: 1.4em;	
-	text-align: right;
+.bar-left {
+    width: 40%;
+    height: 100%;
+    float: left;
+    display: inline-block;
+    padding-left: 1em;
+    font-size: 1.5em;
 }
 
-.menu{
-	display: inline-block;
-	vertical-align: sub;
-	margin-right: 1em;
+.bar-right {
+    width: 60%;
+    height: 100%;
+    float: right;
+    display: inline-block;
+    padding-right: 1em;
+    font-size: 1.4em;
+    text-align: right;
 }
 
-.menu img{
-	height: 1em;
-	width: 1em;	
+.menu {
+    display: inline-block;
+    vertical-align: sub;
+    margin-right: 1em;
 }
 
-.header-txt{	
-	text-align: center;	
-	font-family: 'Nunito', sans-serif;	
+.menu img {
+    height: 1em;
+    width: 1em;
 }
 
-.header-photo img{	
-	height: 7em;
-	width: 7em;
+.header-txt {
+    text-align: center;
+    font-family: 'Nunito', sans-serif;
 }
 
-.header-txt-1{
-	font-size: 2.5em;
-	width: 70%;
-	display: block;
-	margin:auto;
+.header-photo img {
+    height: 7em;
+    width: 7em;
 }
 
-.header-txt-2{
-	font-size: 2.5em;
-	font-family:DFKai-sb;
-	width: 100%;
-	display: block;
+.header-txt-1 {
+    font-size: 2.5em;
+    width: 70%;
+    display: block;
+    margin: auto;
 }
 
-.header-icon{
-	padding-top: 2em;
-	width: 100%;
-	display: block;
+.header-txt-2 {
+    font-size: 2.5em;
+    font-family: DFKai-sb;
+    width: 100%;
+    display: block;
 }
 
-.header-icon img{
-	height: 3em;
-	width: 3em;
-	margin-right: 1em; 
+.header-icon {
+    padding-top: 2em;
+    width: 100%;
+    display: block;
 }
 
-.body{
-	background-color: #a5e7ff;
-	width: 100%;
-	height: auto;
-	padding-top: 5em;
-	font-family:DFKai-sb;
-	clear:both;
-	margin:0 auto;
-	position:relative;
-	overflow:hidden;
+.header-icon img {
+    height: 3em;
+    width: 3em;
+    margin-right: 1em;
 }
 
-.article{
-	width: 50em;
-	height: 20em;
-	background-color: white;
-	margin-bottom: 5em;
-	margin-left: auto;
-	margin-right: auto;	
-	box-shadow:0 0 10px 1px rgba(0,0,0,.2);
+.body {
+    background-color: #a5e7ff;
+    width: 100%;
+    height: auto;
+    padding-top: 5em;
+    font-family: DFKai-sb;
+    clear: both;
+    margin: 0 auto;
+    position: relative;
+    overflow: hidden;
 }
 
-.article-title{
-	height: 20%;
-	width: 100%;
+.article {
+    width: 50em;
+    height: 20em;
+    background-color: white;
+    margin-bottom: 5em;
+    margin-left: auto;
+    margin-right: auto;
+    box-shadow: 0 0 10px 1px rgba(0, 0, 0, .2);
 }
 
-.article-title-icon{
-	padding-top: 0.5em;
-	height: 0.1em;
-	float: left;
+.article-title {
+    height: 20%;
+    width: 100%;
 }
 
-.article-title-icon img{
-	height: 3em;
+.article-title-icon {
+    padding-top: 0.5em;
+    height: 0.1em;
+    float: left;
 }
 
-.article-title-txt{
-	padding-top: 0.6em;
-	font-size: 1.8em;
-	float: left;
+.article-title-icon img {
+    height: 3em;
 }
 
-.article-content{
-	height: 60%;
-	width: 100%;
-	background-color: #edeff2;
-	padding-top: 1em;
-	padding-left: 2em;
-	display: inline-block;
+.article-title-txt {
+    padding-top: 0.6em;
+    font-size: 1.8em;
+    float: left;
 }
 
-.article-content img{
-	height: 10em;
-	width: 10em;
-	margin-right: 1em;
-	float: left;
+.article-content {
+    height: 60%;
+    width: 100%;
+    background-color: #edeff2;
+    padding-top: 1em;
+    padding-left: 2em;
+    display: inline-block;
 }
 
-.article-content div{
-	font-size: 2em;
+.article-content img {
+    height: 10em;
+    width: 10em;
+    margin-right: 1em;
+    float: left;
 }
 
-.article-bottom{
-	height: 20%;
-	width: 100%;
-	padding-top: 1.2em;
+.article-content div {
+    font-size: 2em;
 }
 
-.article-bottom-l{	
-	padding-left: 1em;
-	float: left;
-	font-size: 1.5em;
+.article-bottom {
+    height: 20%;
+    width: 100%;
+    padding-top: 1.2em;
 }
 
-.article-bottom-l img{
-	height: 1em;
-	width: 1em;
+.article-bottom-l {
+    padding-left: 1em;
+    float: left;
+    font-size: 1.5em;
 }
 
-.article-bottom-r{
-	padding-right: 2em;
-	float: right;
+.article-bottom-l img {
+    height: 1em;
+    width: 1em;
 }
 
-#top{
-	position: fixed;
-	height: 3em;
-	width: 3em;
-	bottom: 15%;
-	right: 3em;	
-	display: none;
+.article-bottom-r {
+    padding-right: 2em;
+    float: right;
 }
 
-#mail{
-	position: fixed;
-	height: 3em;
-	width: 3em;
-	top: 20%;
-	right: 3em;
-	opacity: 0.7;
+#top {
+    position: fixed;
+    height: 3em;
+    width: 3em;
+    bottom: 15%;
+    right: 3em;
+    display: none;
 }
 
-#chattingRoom{
-	position: fixed;
-	display: none;
-	height: 19.5em;
-	width: 21em;
-	padding: 0.5em;
-	top: 30%;
-	right: 3em;
-	background-color: #89DFE1;
-	opacity: 0.9;
-	border: 0.1em;
-	border-style: solid;
-	border-color: gray;	
-	box-shadow:0 0 10px 1px rgba(0,0,0,.8);
-	font-family: Microsoft JhengHei;
-
+#mail {
+    position: fixed;
+    height: 3em;
+    width: 3em;
+    top: 20%;
+    right: 3em;
+    opacity: 0.7;
 }
 
-.nickNameBar{
-	display: inline-block;
-	width: auto;
+#chattingRoom {
+    position: fixed;
+    display: none;
+    height: 19.5em;
+    width: 21em;
+    padding: 0.5em;
+    top: 30%;
+    right: 3em;
+    background-color: #89DFE1;
+    opacity: 0.9;
+    border: 0.1em;
+    border-style: solid;
+    border-color: gray;
+    box-shadow: 0 0 10px 1px rgba(0, 0, 0, .8);
+    font-family: Microsoft JhengHei;
 }
 
-#nickName{
-	height: 1.5em;
-	width: 10em;
+.nickNameBar {
+    display: inline-block;
+    width: auto;
+}
+
+#nickName {
+    height: 1.5em;
+    width: 10em;
+    margin-bottom: 0.5em;
+}
+
+.changeNameBtn {
 	margin-bottom: 0.5em;
+    float: right;
+    display: none;
 }
 
-#chattingRoom textarea{
-	max-height: 14em;
-	max-width: 20em;
-	height: 14em;
-	width: 20em;	
+#chattingRoom textarea {
+    max-height: 14em;
+    max-width: 20em;
+    height: 14em;
+    width: 20em;
 }
 
-#txtbar{
-	height: 2em;
-	width: 16em;
+#txtbar {
+    height: 2em;
+    width: 16em;
 }
 
-#chattingRoom button{
+#chattingRoom button {}
+
+.footer {
+    font-family: 'Gloria Hallelujah', cursive;
+    width: 100%;
+    height: 1em;
+    text-align: center;
+    display: inline-block;
 }
 
-.footer{
-	font-family: 'Gloria Hallelujah', cursive;
-	width: 100%;
-	height: 1em;
-	text-align: center;
-	display: inline-block;
-}
+@media only screen and (max-width: 768px) {
+    * {
+        font-size: 0.9em;
+    }
 
-@media only screen and (max-width : 768px){	
-	*{
-		font-size: 0.9em;
-	}
+    .bar-left {
+        width: 20%;
+        padding-top: 0.5em;
+        padding-left: 0em;
+        font-size: 1.2em;
+    }
 
-	.bar-left{
-		width: 20%;
-		padding-top: 0.5em;
-		padding-left: 0em;
-		font-size: 1.2em;
-	}
+    .bar-right {
+        width: 80%;
+        padding-right: 0em;
+    }
 
-	.bar-right{
-		width: 80%;
-		padding-right: 0em;
-	}
+    .article {
+        width: 90%;
+    }
 
-	.article{
-		width: 90%;
-	}
+    .article-bottom-r img {
+        height: 2em;
+    }
 
-	.article-bottom-r img{
-		height: 2em;
-	}
+    #chattingRoom {
+        font-size: 1em;
+        right: 0;
+        width: 90%;
+    }
 
-	#chattingRoom{
-		font-size: 1em;
-		right: 0;
-		width: 90%;
-	}
+    #chattingRoom textarea {
+        width: 100%;
+        min-width: 100%;
+    }
 
-	#chattingRoom textarea{
-		width: 100%;
-		min-width: 100%;
+    #txtbar{
+    	width: 80%
+    }
 }

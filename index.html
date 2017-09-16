@@ -93,10 +93,13 @@
     <img src="img/top.png" id="top">
     <img src="img/mail.png" id="mail">
     <div id="chattingRoom">
-        <div class="nickNameBar">
-            暱稱：
+        <div>
+            <div class="nickNameBar">
+                暱稱：
+            </div>
+            <input type="text" id="nickName" placeholder="請輸入暱稱" onfocus="this.placeholder=''" onblur="this.placeholder='請輸入暱稱'">
+            <button class="changeNameBtn">更改暱稱</button>
         </div>
-        <input type="text" id="nickName" placeholder="請輸入暱稱" onfocus="this.placeholder=''" onblur="this.placeholder='請輸入暱稱'">
         <textarea id="txtbox" onfocus="blur()"></textarea>
         <div>
             <input type="text" placeholder="先輸入暱稱在留言" id="txtbar">
@@ -196,19 +199,65 @@ $(document).ready(function() {
         $("#txtbox").scrollTop($('#txtbox')[0].scrollHeight);
     });
 
+    if (localStorage.getItem('user')) {
+        $(".nickNameBar").text("暱稱：" + localStorage.getItem('user'));
+        $("#nickName").val(localStorage.getItem('user'))
+        $(".changeNameBtn").show();
+        $("#nickName").hide();
+        $("#txtbar").val("");
+        $("#txtbar")[0].placeholder = "可以留言囉!";
+    }
+
+    $(".changeNameBtn").click(function() {
+        $(this).hide();
+        localStorage.removeItem('user');
+        $(".nickNameBar").text("");
+        $("#nickName").show();
+        $("#txtbar")[0].placeholder = "先輸入暱稱在留言";
+    });
+
     function waitForSend() {
         var msg = {
             user: $("#nickName").val(),
             txt: $("#txtbar").val()
         }
+        changePattern(msg.txt);
+
         if (msg.user != "" && msg.txt != "") {
             sendMsg(msg);
-            $(".nickNameBar").text("暱稱：" + msg.user);
-            $("#nickName").hide();
+            if (!localStorage.getItem('user')) {
+                localStorage.setItem('user', msg.user);
+                $(".changeNameBtn").show();
+                $(".nickNameBar").text("暱稱：" + msg.user);
+                $("#nickName").hide();
+                $("#txtbar")[0].placeholder = "可以留言囉!";
+            }
             $("#txtbar").val("");
-            $("#txtbar")[0].placeholder = "可以留言囉!";
         } else if (msg.user == "") {
             $("#txtbar").val("");
+        }
+    }
+
+    function changePattern(txt) {
+        switch (txt) {
+            case 'snow':
+                pattern = snow;
+                break;
+            case 'flower':
+                pattern = flower;
+                break;
+            case 'love':
+                pattern = love;
+                break;
+            case 'sun':
+                pattern = sun;
+                break;
+            case 'note':
+                pattern = note;
+                break;
+            case 'star':
+                pattern = star;
+                break;
         }
     }
 
