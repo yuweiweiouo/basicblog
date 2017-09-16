@@ -1,4 +1,7 @@
  //❅✿❤
+ var flower = "✿";
+ var love = "❤";
+ var snow = "❅";
  var pattern = "❅";
  snowing = function() {
 
@@ -38,15 +41,15 @@
 
  var interval = setInterval(snowing, 200);
 
- var snow = true;
+ var onSnow = true;
 
  $("#snow").click(function() {
-     if (snow == true) {
+     if (onSnow == true) {
          clearInterval(interval);
-         snow = false;
+         onSnow = false;
      } else {
          interval = setInterval(snowing, 200);
-         snow = true;
+         onSnow = true;
      }
 
  });
