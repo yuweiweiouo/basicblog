@@ -29,12 +29,12 @@
              break;
          case '♪':
          case '♫':
-         case '♯':         
+         case '♯':
              color = "mediumpurple";
              var randonNum = Math.floor(Math.random() * (3));
-             if(randonNum == 0)pattern = '♪';
-             if(randonNum == 1)pattern = '♫';
-             if(randonNum == 2)pattern = '♯';
+             if (randonNum == 0) pattern = '♪';
+             if (randonNum == 1) pattern = '♫';
+             if (randonNum == 2) pattern = '♯';
              break;
      }
 
@@ -72,8 +72,9 @@
 
  };
 
+ var interval = setInterval(snowing, 200);
 
- var onSnow = false;
+ var onSnow = true;
 
  $("#snow").click(function() {
      if (onSnow == true) {
