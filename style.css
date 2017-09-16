@@ -14,6 +14,7 @@
 	height: 25em;
 	object-fit:cover;
 	box-shadow:0 0 1em 0.5em rgba(165, 231, 255,.87) inset;
+	text-align: center;
 }
 
 .bar{
@@ -55,7 +56,7 @@
 
 .header-txt{	
 	text-align: center;	
-	font-family: 'Nunito', sans-serif;
+	font-family: 'Nunito', sans-serif;	
 }
 
 .header-photo img{	
@@ -65,15 +66,22 @@
 
 .header-txt-1{
 	font-size: 2.5em;
+	width: 70%;
+	display: block;
+	margin:auto;
 }
 
 .header-txt-2{
 	font-size: 2.5em;
 	font-family:DFKai-sb;
+	width: 100%;
+	display: block;
 }
 
 .header-icon{
 	padding-top: 2em;
+	width: 100%;
+	display: block;
 }
 
 .header-icon img{
