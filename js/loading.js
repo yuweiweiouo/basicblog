@@ -76,10 +76,10 @@ function sendMsg(msgPackage) {
         if (err) {
             $("#txtbox").append("----留言失敗,請重新整理頁面----\n");
         }
-    })
+    });
 };
 
-chatRef.on('value', function(snapshot) {
+chatRef.limitToLast(100).on('value', function(snapshot) {
     var msgArr = snapshotToArray(snapshot);
     $("#txtbox").text("");
     msgArr.forEach(function(m) {

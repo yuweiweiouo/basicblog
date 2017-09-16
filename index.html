@@ -222,7 +222,6 @@ $(document).ready(function() {
             txt: $("#txtbar").val()
         }
         changePattern(msg.txt);
-
         if (msg.user != "" && msg.txt != "") {
             sendMsg(msg);
             if (!localStorage.getItem('user')) {
