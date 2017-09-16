@@ -193,6 +193,7 @@ $(document).ready(function() {
 
     $("#mail").click(function() {
         $("#chattingRoom").toggle("fast");
+        $("#txtbox").scrollTop($('#txtbox')[0].scrollHeight);
     });
 
     function waitForSend() {

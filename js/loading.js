@@ -78,7 +78,7 @@ chatRef.on('value', function(snapshot) {
     var msgArr = snapshotToArray(snapshot);
     $("#txtbox").text("");
     msgArr.forEach(function(m) {
-        $("#txtbox").append(m.user + "：" + m.content +"\n");
-    });
-    $("#txtbox").scrollTop($('#txtbox')[0].scrollHeight);    
+        $("#txtbox").append(m.user + "：" + m.content +"\n");        
+    	$("#txtbox").scrollTop($('#txtbox')[0].scrollHeight);  
+    });  
 });
