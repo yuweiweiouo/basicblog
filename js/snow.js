@@ -1,17 +1,46 @@
  //❅✿❤
- console.log("可輸入指令");
- console.log("pattern = snow    --下雪");
- console.log("pattern = flower  --下花花");
- console.log("pattern = love    --愛心雨");
+ console.log("可輸入指令         --請先開起雪花飄功能");
+ console.log("pattern = snow    --預設");
+ console.log("        = flower  --下花花");
+ console.log("        = love    --愛心雨");
+ console.log("        = note    --音符");
+ console.log("        = sun     --太陽下凡");
+ console.log("        = star    --流星雨");
  var flower = "✿";
  var love = "❤";
  var snow = "❅";
+ var sun = "☀";
+ var note = "♪";
+ var star = "★";
  var pattern = "❅";
  var color = "white";
  snowing = function() {
-     if (pattern == snow) color = "white";
-     if (pattern == flower) color = "pink";
-     if (pattern == love) color = "red";
+     switch (pattern) {
+         case '❅':
+             color = "white";
+             break;
+         case '✿':
+             color = "pink";
+             break;
+         case '❤':
+             color = "red";
+             break;
+         case '☀':
+             color = "gold";
+             break;
+         case '★':
+             color = "yellow";
+             break;
+         case '♪':
+         case '♫':
+         case '♯':         
+             color = "mediumpurple";
+             var randonNum = Math.floor(Math.random() * (3));
+             if(randonNum == 0)pattern = '♪';
+             if(randonNum == 1)pattern = '♫';
+             if(randonNum == 2)pattern = '♯';
+             break;
+     }
 
      var d = `<div class='snow' style="color:${color};">${pattern}<div>`;
 
