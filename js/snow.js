@@ -47,9 +47,8 @@
 
  };
 
- var interval = setInterval(snowing, 200);
 
- var onSnow = true;
+ var onSnow = false;
 
  $("#snow").click(function() {
      if (onSnow == true) {
