@@ -79,6 +79,5 @@ chatRef.on('value', function(snapshot) {
 	msgArr.forEach(function(m){
 		$("#txtbox").append(m.msg + "\n");
 	});
-	console.log($('#txtbox'));
 	$("#txtbox").scrollTop($('#txtbox')[0].scrollHeight);
 });
