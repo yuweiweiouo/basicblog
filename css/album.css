@@ -1,3 +1,7 @@
+.-album{
+	display: none;
+}
+
 .slideWrapper{
 	height: auto;
 	width: 49em;

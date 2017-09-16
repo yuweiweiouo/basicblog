@@ -12,6 +12,8 @@ var database = firebase.database();
 
 var articleRef = firebase.database().ref('article').once('value');
 
+var chatRef = firebase.database().ref('chat');
+
 function snapshotToArray(snapshot) {
     var returnArr = [];
 
@@ -27,6 +29,7 @@ function loadArticle() {
         var articles = snapshotToArray(snapshot);
         var artArr = [];
         articles.forEach(function(article) {
+            if (!article.img) article.img = "./img/noPhoto.jpg";
             var oneOfArticle = `
 			<div class="article">
 			<div class="article-title">
@@ -63,3 +66,19 @@ function loadArticle() {
 }
 
 loadArticle();
+
+function sendMsg(msg) {
+    chatRef.push({
+        msg
+    });
+};
+
+chatRef.on('value', function(snapshot) {
+	var msgArr = snapshotToArray(snapshot);
+	$("#txtbox").text("");
+	msgArr.forEach(function(m){
+		$("#txtbox").append(m.msg + "\n");
+	});
+	console.log($('#txtbox'));
+	$("#txtbox").scrollTop($('#txtbox')[0].scrollHeight);
+});

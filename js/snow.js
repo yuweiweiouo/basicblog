@@ -1,55 +1,52 @@
-$(function(){
+ //❅✿❤
 
-	var d="<div class='snow'>❅<div>";
+    var d = "<div class='snow'>❅<div>";
 
-	snowing = function(){
+    snowing = function() {
 
-		var f=$(document).width();
+        var f = $(document).width();
 
-		var e=Math.random()*f-100;
+        var e = Math.random() * f - 100;
 
-		var o=0.3+Math.random();
+        var o = 0.3 + Math.random();
 
-		var fon=10+Math.random()*30;
+        var fon = 10 + Math.random() * 30;
 
-		var l = e - 100 + 200 * Math.random();
+        var l = e - 100 + 200 * Math.random();
 
-		var k=2000 + 5000 * Math.random();
+        var k = 2000 + 5000 * Math.random();
 
-		$(d).clone().appendTo(".body").css({
+        $(d).clone().appendTo(".body").css({
 
-			left:e+"px",
+            left: e + "px",
 
-			opacity:o,
+            opacity: o,
 
-			"font-size":fon,
+            "font-size": fon,
 
-		}).animate({
+        }).animate({
 
-		  top:"400px",
+            top: "400px",
 
-			left:l+"px",
+            left: l + "px",
 
-			opacity:0.1,
+            opacity: 0.1,
 
-		},k,"linear",function(){$(this).remove()})
+        }, k, "linear", function() { $(this).remove() })
 
-	};
+    };
 
-	var interval = setInterval(snowing,200);
+var interval = setInterval(snowing, 200);
 
-	var snow = true;
+var snow = true;
 
-	$("#snow").click(function(){
-		if(snow == true){
-			clearInterval(interval);
-			snow = false;
-		}
-		else{
-			setInterval(snowing,200);
-			snow = true;
-		}
+$("#snow").click(function() {
+    if (snow == true) {
+        clearInterval(interval);
+        snow = false;
+    } else{
+    	interval = setInterval(snowing, 200);
+        snow = true;
+    }
 
-	});
-
-})
+});

@@ -18,7 +18,7 @@
     <div class="header">
         <div class="bar">
             <div class="bar-left">
-                <div class="blog">YUWEIWEI 's Blog</div>
+                <div class="blog">YUWEIWEI</div>
             </div>
             <div class="bar-right">
                 <div class="menu">
@@ -91,15 +91,20 @@
         </div>
     </div>
     <img src="img/top.png" id="top">
+    <img src="img/mail.png" id="mail">
+    <div id="chattingRoom">
+        <textarea id="txtbox" onfocus="blur()"></textarea>
+        <div>
+            <input type="text" id="txtbar">
+            <button id="txtbtn">送出</button>
+        </div>
+    </div>
     <div class="footer">
         ©Powered by yuweiwei
     </div>
 </body>
 <script type="text/javascript">
 $(document).ready(function() {
-    $(".page").hide();
-    $(".-home").show();
-
     $("#fb").mouseenter(function() {
         $(this).attr("src", "./img/fb1.png");
     });
@@ -167,9 +172,45 @@ $(document).ready(function() {
         }, 100);
     });
 
+    $("#mail").mouseenter(function() {
+        $(this).animate({
+            opacity: '1'
+        }, 100);
+    });
+
+    $("#mail").mouseleave(function() {
+        $(this).animate({
+            opacity: '.7'
+        }, 100);
+    });
+
+    $("#mail").click(function() {
+        $("#chattingRoom").toggle("fast");
+    });
+
+    $("#txtbar").keypress(function(k) {
+        if (k.keyCode == 13) {
+            var msg = $("#txtbar").val();
+            if (msg) {
+                sendMsg(msg);
+                $("#txtbar").val("");
+            }
+        }
+    });
+
+    $("#txtbtn").click(function() {
+        var msg = $("#txtbar").val();
+        if (msg) {
+            sendMsg(msg);
+            $("#txtbar").val("");
+        }
+    });
+
     $("#top").click(function() {
         $("body").animate({ scrollTop: 0 }, 600);
     });
+
+
 
     var topScrollpos = 0;
     $(window).scroll(function() {
@@ -181,6 +222,14 @@ $(document).ready(function() {
                 $("#top").hide(100);
             }
         }
+    });
+
+    var root = document.querySelector(':root');
+    window.addEventListener('mousemove', function(e) {
+        var x = e.pageX / window.innerWidth * 2 - 1;
+        var y = e.pageY / window.innerHeight * 2 - 1;
+        root.style.setProperty('--x', x);
+        root.style.setProperty('--y', y);
     });
 });
 </script>
