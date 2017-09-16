@@ -31,32 +31,32 @@ function loadArticle() {
         articles.forEach(function(article) {
             if (!article.img) article.img = "./img/noPhoto.jpg";
             var oneOfArticle = `
-			<div class="article">
-			<div class="article-title">
-			<div class="article-title-icon">
-			<img src="./img/title.png">
-			</div>
-			<div class="article-title-txt">
-			${article.title}
-			</div>
-			</div>
-			<div class="article-content">
-			<img src="${article.img}" onerror="this.src='./img/noPhoto.jpg'" >
-			<div class="article-content-txt">
-			${article.content}
-			</div>
-			</div>
-			<div class="article-bottom">
-			<div class="article-bottom-l">
-			<img src="./img/calendar.png"> 
-			${article.date}
-			</div>
-			<div class="article-bottom-r">
-			<img src="./img/more.png">
-			</div>
-			</div>
-			</div>
-			`;
+            <div class="article">
+            <div class="article-title">
+            <div class="article-title-icon">
+            <img src="./img/title.png">
+            </div>
+            <div class="article-title-txt">
+            ${article.title}
+            </div>
+            </div>
+            <div class="article-content">
+            <img src="${article.img}" onerror="this.src='./img/noPhoto.jpg'" >
+            <div class="article-content-txt">
+            ${article.content}
+            </div>
+            </div>
+            <div class="article-bottom">
+            <div class="article-bottom-l">
+            <img src="./img/calendar.png"> 
+            ${article.date}
+            </div>
+            <div class="article-bottom-r">
+            <img src="./img/more.png">
+            </div>
+            </div>
+            </div>
+            `;
             artArr.push(oneOfArticle);
         });
         artArr.forEach(function(a) {
@@ -86,4 +86,18 @@ chatRef.limitToLast(100).on('value', function(snapshot) {
         $("#txtbox").append(m.user + "：" + m.content + "\n");
     });
     $("#txtbox").scrollTop($('#txtbox')[0].scrollHeight);
+});
+
+var provider = new firebase.auth.FacebookAuthProvider();
+firebase.auth().languageCode = 'fr_FR';
+
+firebase.auth().signInWithPopup(provider).then(function(result) {
+    var token = result.credential.accessToken;
+    var user = result.user;
+}).catch(function(error) {
+    var errorCode = error.code;
+    var errorMessage = error.message;
+    var email = error.email;
+    var credential = error.credential;
+    console.log(errorMessage);
 });
