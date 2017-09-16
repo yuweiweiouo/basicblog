@@ -1,4 +1,8 @@
  //❅✿❤
+ console.log("可輸入指令");
+ console.log("pattern = snow    --下雪");
+ console.log("pattern = flower  --下花花");
+ console.log("pattern = love    --愛心雨"); 
  var flower = "✿";
  var love = "❤";
  var snow = "❅";
