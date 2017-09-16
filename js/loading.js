@@ -12,7 +12,7 @@ var database = firebase.database();
 
 var articleRef = firebase.database().ref('article').once('value');
 
-var chatRef = firebase.database().ref('chat/' + (today.getMonth()+1) + '月/' + today.getDay() + '日');
+var chatRef = firebase.database().ref('chat/' + (today.getMonth()+1) + '月/' + today.getDate() + '日');
 
 function snapshotToArray(snapshot) {
     var returnArr = [];
@@ -76,7 +76,6 @@ function sendMsg(msgPackage) {
 
 chatRef.on('value', function(snapshot) {
     var msgArr = snapshotToArray(snapshot);
-    console.log(msgArr);
     $("#txtbox").text("");
     msgArr.forEach(function(m) {
         $("#txtbox").append(m.user + "：" + m.content + "\n");

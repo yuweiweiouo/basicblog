@@ -205,10 +205,12 @@ $(document).ready(function() {
             $(".nickNameBar").text("暱稱：" + msg.user);
             $("#nickName").hide();
             $("#txtbar").val("");
+            $("#txtbar")[0].placeholder = "可以留言囉!";
         } else if (msg.user == "") {
             $("#txtbar").val("");
         }
     }
+    console.log($("#txtbar")[0].placeholder);
 
     $("#txtbar").keypress(function(k) {
         if (k.keyCode == 13) {
