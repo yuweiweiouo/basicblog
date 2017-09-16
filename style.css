@@ -262,4 +262,13 @@
 		height: 2em;
 	}
 
+	#chattingRoom{
+		font-size: 1em;
+		right: 0;
+		width: 90%;
+	}
+
+	#chattingRoom textarea{
+		width: 100%;
+		min-width: 100%;
 }
