@@ -2,14 +2,16 @@
  console.log("可輸入指令");
  console.log("pattern = snow    --下雪");
  console.log("pattern = flower  --下花花");
- console.log("pattern = love    --愛心雨"); 
- console.log(`color = "顏色ㄉ英文" --要加雙引號喔!`)
+ console.log("pattern = love    --愛心雨");
  var flower = "✿";
  var love = "❤";
  var snow = "❅";
- var color = "white";
  var pattern = "❅";
+ var color = "white";
  snowing = function() {
+     if (pattern == snow) color = "white";
+     if (pattern == flower) color = "pink";
+     if (pattern == love) color = "red";
 
      var d = `<div class='snow' style="color:${color};">${pattern}<div>`;
 
