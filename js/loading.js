@@ -23,7 +23,6 @@ function snapshotToArray(snapshot) {
     });
     return returnArr;
 }
-
 function loadArticle() {
     articleRef.then(function(snapshot) {
         var articles = snapshotToArray(snapshot);
@@ -70,7 +69,8 @@ loadArticle();
 function sendMsg(msgPackage) {
     chatRef.push({
     	user: msgPackage.user,
-        content: msgPackage.txt
+        content: msgPackage.txt,
+        time: today.getHours() + ":" + today.getMinutes()
     });
 };
 
@@ -78,7 +78,7 @@ chatRef.on('value', function(snapshot) {
     var msgArr = snapshotToArray(snapshot);
     $("#txtbox").text("");
     msgArr.forEach(function(m) {
-        $("#txtbox").append(m.user + "：" + m.content + "\n");
+        $("#txtbox").append(m.user + "：" + m.content +"\n");
     });
     $("#txtbox").scrollTop($('#txtbox')[0].scrollHeight);    
 });
