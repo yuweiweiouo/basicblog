@@ -1,4 +1,4 @@
-// Initialize Firebase
+var today = new Date();
 var config = {
     apiKey: "AIzaSyDIvGlbeFCi3Jo3I9-uNv5qqjHu-qONd3w",
     authDomain: "my-project-1492012958680.firebaseapp.com",
@@ -12,7 +12,7 @@ var database = firebase.database();
 
 var articleRef = firebase.database().ref('article').once('value');
 
-var chatRef = firebase.database().ref('chat');
+var chatRef = firebase.database().ref('chat/' + (today.getMonth()+1) + '月/' + today.getDay() + '日');
 
 function snapshotToArray(snapshot) {
     var returnArr = [];
@@ -67,17 +67,19 @@ function loadArticle() {
 
 loadArticle();
 
-function sendMsg(msg) {
+function sendMsg(msgPackage) {
     chatRef.push({
-        msg
+    	user: msgPackage.user,
+        content: msgPackage.txt
     });
 };
 
 chatRef.on('value', function(snapshot) {
-	var msgArr = snapshotToArray(snapshot);
-	$("#txtbox").text("");
-	msgArr.forEach(function(m){
-		$("#txtbox").append(m.msg + "\n");
-	});
-	$("#txtbox").scrollTop($('#txtbox')[0].scrollHeight);
+    var msgArr = snapshotToArray(snapshot);
+    console.log(msgArr);
+    $("#txtbox").text("");
+    msgArr.forEach(function(m) {
+        $("#txtbox").append(m.user + "：" + m.content + "\n");
+    });
+    $("#txtbox").scrollTop($('#txtbox')[0].scrollHeight);    
 });

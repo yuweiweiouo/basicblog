@@ -189,7 +189,7 @@
 	position: fixed;
 	display: none;
 	height: 19.5em;
-	width: 15em;
+	width: 21em;
 	padding: 0.5em;
 	top: 30%;
 	right: 3em;
@@ -199,18 +199,31 @@
 	border-style: solid;
 	border-color: gray;	
 	box-shadow:0 0 10px 1px rgba(0,0,0,.8);
+	font-family: Microsoft JhengHei;
+
+}
+
+.nickNameBar{
+	display: inline-block;
+	width: auto;
+}
+
+#nickName{
+	height: 1.5em;
+	width: 10em;
+	margin-bottom: 0.5em;
 }
 
 #chattingRoom textarea{
-	max-height: 16em;
-	max-width: 14em;
-	height: 16em;
-	width: 14em;	
+	max-height: 14em;
+	max-width: 20em;
+	height: 14em;
+	width: 20em;	
 }
 
-#chattingRoom input{
+#txtbar{
 	height: 2em;
-	width: 10em;
+	width: 16em;
 }
 
 #chattingRoom button{

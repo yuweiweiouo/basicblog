@@ -93,9 +93,13 @@
     <img src="img/top.png" id="top">
     <img src="img/mail.png" id="mail">
     <div id="chattingRoom">
+        <div class="nickNameBar">
+            暱稱：
+        </div>
+        <input type="text" id="nickName" placeholder="請輸入暱稱" onfocus="this.placeholder=''" onblur="this.placeholder='請輸入暱稱'">
         <textarea id="txtbox" onfocus="blur()"></textarea>
         <div>
-            <input type="text" id="txtbar">
+            <input type="text" placeholder="先輸入暱稱在留言" id="txtbar">
             <button id="txtbtn">送出</button>
         </div>
     </div>
@@ -191,22 +195,29 @@ $(document).ready(function() {
         $("#chattingRoom").toggle("fast");
     });
 
+    function waitForSend() {
+        var msg = {
+            user: $("#nickName").val(),
+            txt: $("#txtbar").val()
+        }
+        if (msg.user != "" && msg.txt != "") {
+            sendMsg(msg);
+            $(".nickNameBar").text("暱稱：" + msg.user);
+            $("#nickName").hide();
+            $("#txtbar").val("");
+        } else if (msg.user == "") {
+            $("#txtbar").val("");
+        }
+    }
+
     $("#txtbar").keypress(function(k) {
         if (k.keyCode == 13) {
-            var msg = $("#txtbar").val();
-            if (msg) {
-                sendMsg(msg);
-                $("#txtbar").val("");
-            }
+            waitForSend();
         }
     });
 
     $("#txtbtn").click(function() {
-        var msg = $("#txtbar").val();
-        if (msg) {
-            sendMsg(msg);
-            $("#txtbar").val("");
-        }
+        waitForSend();
     });
 
     $("#top").click(function() {
