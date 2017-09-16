@@ -12,7 +12,7 @@ var database = firebase.database();
 
 var articleRef = firebase.database().ref('article').once('value');
 
-var chatRef = firebase.database().ref('chat/' + (today.getMonth()+1) + '月/' + today.getDate() + '日');
+var chatRef = firebase.database().ref('chat/' + (today.getMonth() + 1) + '月/' + today.getDate() + '日');
 
 function snapshotToArray(snapshot) {
     var returnArr = [];
@@ -23,6 +23,7 @@ function snapshotToArray(snapshot) {
     });
     return returnArr;
 }
+
 function loadArticle() {
     articleRef.then(function(snapshot) {
         var articles = snapshotToArray(snapshot);
@@ -68,12 +69,13 @@ loadArticle();
 
 function sendMsg(msgPackage) {
     chatRef.push({
-    	user: msgPackage.user,
+        user: msgPackage.user,
         content: msgPackage.txt,
         time: today.getHours() + ":" + today.getMinutes()
-    },function(err){
-    	if(err){
-    	$("#txtbox").append("----留言失敗,請重新整理頁面----\n");}
+    }, function(err) {
+        if (err) {
+            $("#txtbox").append("----留言失敗,請重新整理頁面----\n");
+        }
     })
 };
 
@@ -81,7 +83,7 @@ chatRef.on('value', function(snapshot) {
     var msgArr = snapshotToArray(snapshot);
     $("#txtbox").text("");
     msgArr.forEach(function(m) {
-        $("#txtbox").append(m.user + "：" + m.content +"\n");
+        $("#txtbox").append(m.user + "：" + m.content + "\n");
     });
-    $("#txtbox").scrollTop($('#txtbox')[0].scrollHeight);    
+    $("#txtbox").scrollTop($('#txtbox')[0].scrollHeight);
 });
