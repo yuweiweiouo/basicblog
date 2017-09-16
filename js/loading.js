@@ -41,7 +41,7 @@ function loadArticle() {
 			</div>
 			</div>
 			<div class="article-content">
-			<img src="${article.img}">
+			<img src="${article.img}" onerror="this.src='./img/noPhoto.jpg'" >
 			<div class="article-content-txt">
 			${article.content}
 			</div>

@@ -1,7 +1,5 @@
  //❅✿❤
- console.log("在聊天室留言以下單字可開啟彩蛋");
- console.log("snow\nflower\nlove\nnote\nsun\nstar")
-
+ console.log("在聊天室留言以下單字可開啟彩蛋:\nsnow\nflower\nlove\nnote\nsun\nstar");
  var snow = "❅";
  var flower = "✿";
  var love = "❤";
