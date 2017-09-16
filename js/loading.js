@@ -88,7 +88,29 @@ chatRef.limitToLast(100).on('value', function(snapshot) {
     $("#txtbox").scrollTop($('#txtbox')[0].scrollHeight);
 });
 
-var provider = new firebase.auth.FacebookAuthProvider();
+function login(user) {
+    firebase.auth().signInWithEmailAndPassword(user.account, user.password).catch(function(error) {
+        var errorCode = error.code;
+        var errorMessage = error.message;
+    });
+    firebase.auth().onAuthStateChanged(function(user) {
+        if (user) {
+            localStorage.setItem('isLogined','true');
+            $(".loginPanel").hide("fast");
+        }
+    });
+}
+firebase.auth().onAuthStateChanged(function(user) {
+        if (user) {            
+            console.log("Logined");
+        } else {
+            console.log("NotLogined");
+        }
+    });
+firebase.auth().signOut();
+localStorage.removeItem('isLogined');
+
+/*var provider = new firebase.auth.FacebookAuthProvider();
 firebase.auth().languageCode = 'fr_FR';
 
 firebase.auth().signInWithPopup(provider).then(function(result) {
@@ -100,4 +122,4 @@ firebase.auth().signInWithPopup(provider).then(function(result) {
     var email = error.email;
     var credential = error.credential;
     console.log(errorMessage);
-});
+});*/

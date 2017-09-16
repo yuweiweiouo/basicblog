@@ -90,6 +90,19 @@
         </div>
     </div>
     <img src="img/top.png" id="top">
+    <img src="img/add.png" id="add">
+    <div class="loginPanel">
+        <div>請先登入</div>
+        <div>
+            <div>帳號：
+                <input type="text" class="account">
+            </div>
+            <div>密碼：
+                <input type="password" class="password">
+            </div>
+            <button class="loginBtn">登入</button>
+        </div>
+    </div>
     <img src="img/mail.png" id="mail">
     <div id="chattingRoom">
         <div>
@@ -181,6 +194,18 @@ $(document).ready(function() {
         }, 100);
     });
 
+    $("#add").mouseenter(function() {
+        $(this).animate({
+            opacity: '1'
+        }, 100);
+    });
+
+    $("#add").mouseleave(function() {
+        $(this).animate({
+            opacity: '.6'
+        }, 100);
+    });
+
     $("#mail").mouseenter(function() {
         $(this).animate({
             opacity: '1'
@@ -193,6 +218,12 @@ $(document).ready(function() {
         }, 100);
     });
 
+    $("#add").click(function() {
+        if (localStorage.getItem('isLogined') != 'true') {
+            $(".loginPanel").toggle("fast");
+        }
+    });
+
     $("#mail").click(function() {
         $("#chattingRoom").toggle("fast");
         $("#txtbox").scrollTop($('#txtbox')[0].scrollHeight);
@@ -202,7 +233,13 @@ $(document).ready(function() {
         $("body").animate({ scrollTop: 0 }, 600);
     });
 
-
+    $(".loginBtn").click(function() {
+        var userLogin = {
+            account: $(".account").val(),
+            password: $(".password").val()
+        };
+        login(userLogin);
+    });
 
     var topScrollpos = 0;
     $(window).scroll(function() {
@@ -229,4 +266,5 @@ $(document).ready(function() {
 <script type="text/javascript" src="js/switch.js"></script>
 <script type="text/javascript" src="./js/loading.js"></script>
 <script type="text/javascript" src="./js/chattingRoom.js"></script>
+
 </html>
