@@ -189,16 +189,25 @@
     display: none;
 }
 
-#add{
+#fbLogin {
     position: fixed;
     height: 3em;
     width: 3em;
     top: 20%;
     right: 3em;
+    opacity: 0.7;
+}
+
+#add {
+    position: fixed;
+    height: 3em;
+    width: 3em;
+    top: 30%;
+    right: 3em;
     opacity: 0.6;
 }
 
-.loginPanel{
+.loginPanel {
     position: fixed;
     display: inline-block;
     display: none;
@@ -206,7 +215,7 @@
     height: 10em;
     width: 21em;
     padding: 1em;
-    top: 30%;
+    top: 40%;
     right: 3em;
     background-color: #89DFE1;
     opacity: 0.9;
@@ -218,11 +227,11 @@
     text-align: center;
 }
 
-.account{
+.account {
     margin-top: 0.5em;
 }
 
-.loginPanel input{
+.loginPanel input {
     margin-bottom: 0.5em;
 }
 
@@ -230,7 +239,7 @@
     position: fixed;
     height: 3em;
     width: 3em;
-    top: 30%;
+    top: 40%;
     right: 3em;
     opacity: 0.7;
 }
@@ -241,7 +250,7 @@
     height: 19.5em;
     width: 21em;
     padding: 0.5em;
-    top: 40%;
+    top: 50%;
     right: 3em;
     background-color: #89DFE1;
     opacity: 0.9;
@@ -264,7 +273,7 @@
 }
 
 .changeNameBtn {
-	margin-bottom: 0.5em;
+    margin-bottom: 0.5em;
     float: right;
     display: none;
 }
@@ -327,7 +336,7 @@
         min-width: 100%;
     }
 
-    #txtbar{
-    	width: 80%
+    #txtbar {
+        width: 80%
     }
 }

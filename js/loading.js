@@ -88,38 +88,47 @@ chatRef.limitToLast(100).on('value', function(snapshot) {
     $("#txtbox").scrollTop($('#txtbox')[0].scrollHeight);
 });
 
+function loginFB() {
+    var provider = new firebase.auth.FacebookAuthProvider();
+    firebase.auth().languageCode = 'fr_FR';
+    firebase.auth().signInWithPopup(provider).then(function(result) {
+        var token = result.credential.accessToken;
+        var user = result.user;
+    }).catch(function(error) {
+        var errorCode = error.code;
+        var errorMessage = error.message;
+        var email = error.email;
+        var credential = error.credential;
+        console.log(errorMessage);
+    });
+    firebase.auth().onAuthStateChanged(function(user) {
+        if (user) {
+            $("#fbLogin").attr("src", "./img/logout.png");
+            localStorage.setItem('fbLogined', 'true');
+            $(".loginPanel").hide("fast");
+        }
+    });
+}
+
 function login(user) {
     firebase.auth().signInWithEmailAndPassword(user.account, user.password).catch(function(error) {
         var errorCode = error.code;
         var errorMessage = error.message;
     });
+    
     firebase.auth().onAuthStateChanged(function(user) {
         if (user) {
-            localStorage.setItem('isLogined','true');
+            localStorage.setItem('isLogined', 'true');
             $(".loginPanel").hide("fast");
         }
     });
 }
 firebase.auth().onAuthStateChanged(function(user) {
-        if (user) {            
-            console.log("Logined");
-        } else {
-            console.log("NotLogined");
-        }
-    });
+    if (user) {
+        console.log("Logined");
+    } else {
+        console.log("NotLogined");
+    }
+});
 firebase.auth().signOut();
 localStorage.removeItem('isLogined');
-
-/*var provider = new firebase.auth.FacebookAuthProvider();
-firebase.auth().languageCode = 'fr_FR';
-
-firebase.auth().signInWithPopup(provider).then(function(result) {
-    var token = result.credential.accessToken;
-    var user = result.user;
-}).catch(function(error) {
-    var errorCode = error.code;
-    var errorMessage = error.message;
-    var email = error.email;
-    var credential = error.credential;
-    console.log(errorMessage);
-});*/

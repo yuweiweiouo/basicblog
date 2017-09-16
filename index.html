@@ -90,6 +90,7 @@
         </div>
     </div>
     <img src="img/top.png" id="top">
+    <img src="img/facebook.png" id="fbLogin">
     <img src="img/add.png" id="add">
     <div class="loginPanel">
         <div>請先登入</div>
@@ -194,12 +195,22 @@ $(document).ready(function() {
         }, 100);
     });
 
+    $("#fbLogin").mouseenter(function() {
+        $(this).animate({
+            opacity: '1'
+        }, 100);
+    });
+    $("#fbLogin").mouseleave(function() {
+        $(this).animate({
+            opacity: '.7'
+        }, 100);
+    });
+
     $("#add").mouseenter(function() {
         $(this).animate({
             opacity: '1'
         }, 100);
     });
-
     $("#add").mouseleave(function() {
         $(this).animate({
             opacity: '.6'
@@ -211,7 +222,6 @@ $(document).ready(function() {
             opacity: '1'
         }, 100);
     });
-
     $("#mail").mouseleave(function() {
         $(this).animate({
             opacity: '.7'
@@ -239,6 +249,15 @@ $(document).ready(function() {
             password: $(".password").val()
         };
         login(userLogin);
+    });
+
+    $("#fbLogin").click(function() {
+        if (localStorage.getItem('fbLogin') == "") {
+            loginFB();
+        } else {
+            localStorage.removeItem('fbLogin');
+            firebase.auth().signOut();
+        }
     });
 
     var topScrollpos = 0;
