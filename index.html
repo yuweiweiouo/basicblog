@@ -90,10 +90,12 @@
         </div>
     </div>
     <img src="img/top.png" id="top">
-    <img src="img/menu.png" class="sideBtn" >
-    <img src="img/facebook.png" class="btn fbLogin">
-    <img src="img/add.png" class="btn add">
-    <img src="img/mail.png" class="btn mail">
+    <div class="sideBar">
+        <img src="img/menu.png" class="sideBtn">
+        <img src="img/facebook.png" class="btn fbLogin">
+        <img src="img/add.png" class="btn add">
+        <img src="img/mail.png" class="btn mail">
+    </div>
     <div class="loginPanel">
         <div>請先登入</div>
         <div>
@@ -196,9 +198,12 @@ $(document).ready(function() {
         }, 100);
     });
 
-    $(".sideBtn").click(function() {
-        $(".btn").toggle("fast");
+    $(".sideBtn").mouseenter(function() {
+        $(".btn").show("fast");
     });
+    $(".sideBar").mouseleave(function(){
+        $(".btn").hide("fast");
+    })
 
     $(".fbLogin").mouseenter(function() {
         $(this).animate({

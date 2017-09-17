@@ -189,11 +189,20 @@
     display: none;
 }
 
-.btn{
+.btn {
     display: none;
 }
 
-.sideBtn{
+.sideBar{
+    position: fixed;
+    top: 10%;
+    height: 25em;
+    width: 10em;
+    right: 0;
+
+}
+
+.sideBtn {
     position: fixed;
     height: 3em;
     width: 3em;
