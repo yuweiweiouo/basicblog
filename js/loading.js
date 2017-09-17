@@ -90,7 +90,7 @@ chatRef.limitToLast(100).on('value', function(snapshot) {
 
 function loginFB() {
     var provider = new firebase.auth.FacebookAuthProvider();
-    firebase.auth().languageCode = 'fr_FR';
+    firebase.auth().useDeviceLanguage();
     firebase.auth().signInWithPopup(provider).then(function(result) {
         var token = result.credential.accessToken;
         var user = result.user;
