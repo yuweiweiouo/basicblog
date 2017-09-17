@@ -90,8 +90,10 @@
         </div>
     </div>
     <img src="img/top.png" id="top">
-    <img src="img/facebook.png" id="fbLogin">
-    <img src="img/add.png" id="add">
+    <img src="img/menu.png" class="sideBtn" >
+    <img src="img/facebook.png" class="btn fbLogin">
+    <img src="img/add.png" class="btn add">
+    <img src="img/mail.png" class="btn mail">
     <div class="loginPanel">
         <div>請先登入</div>
         <div>
@@ -104,7 +106,6 @@
             <button class="loginBtn">登入</button>
         </div>
     </div>
-    <img src="img/mail.png" id="mail">
     <div id="chattingRoom">
         <div>
             <div class="nickNameBar">
@@ -195,46 +196,50 @@ $(document).ready(function() {
         }, 100);
     });
 
-    $("#fbLogin").mouseenter(function() {
+    $(".sideBtn").click(function() {
+        $(".btn").toggle("fast");
+    });
+
+    $(".fbLogin").mouseenter(function() {
         $(this).animate({
             opacity: '1'
         }, 100);
     });
-    $("#fbLogin").mouseleave(function() {
+    $(".fbLogin").mouseleave(function() {
         $(this).animate({
             opacity: '.7'
         }, 100);
     });
 
-    $("#add").mouseenter(function() {
+    $(".add").mouseenter(function() {
         $(this).animate({
             opacity: '1'
         }, 100);
     });
-    $("#add").mouseleave(function() {
+    $(".add").mouseleave(function() {
         $(this).animate({
             opacity: '.6'
         }, 100);
     });
 
-    $("#mail").mouseenter(function() {
+    $(".mail").mouseenter(function() {
         $(this).animate({
             opacity: '1'
         }, 100);
     });
-    $("#mail").mouseleave(function() {
+    $(".mail").mouseleave(function() {
         $(this).animate({
             opacity: '.7'
         }, 100);
     });
 
-    $("#add").click(function() {
+    $(".add").click(function() {
         if (localStorage.getItem('isLogined') != 'true') {
             $(".loginPanel").toggle("fast");
         }
     });
 
-    $("#mail").click(function() {
+    $(".mail").click(function() {
         $("#chattingRoom").toggle("fast");
         $("#txtbox").scrollTop($('#txtbox')[0].scrollHeight);
     });
@@ -251,8 +256,8 @@ $(document).ready(function() {
         login(userLogin);
     });
 
-    $("#fbLogin").click(function() {
-        if (localStorage.getItem('fbLogin') == "") {
+    $(".fbLogin").click(function() {
+        if (localStorage.getItem('fbLogin') == null) {
             loginFB();
         } else {
             localStorage.removeItem('fbLogin');

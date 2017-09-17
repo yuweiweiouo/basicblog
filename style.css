@@ -189,7 +189,20 @@
     display: none;
 }
 
-#fbLogin {
+.btn{
+    display: none;
+}
+
+.sideBtn{
+    position: fixed;
+    height: 3em;
+    width: 3em;
+    top: 10%;
+    right: 3em;
+    opacity: 0.7;
+}
+
+.fbLogin {
     position: fixed;
     height: 3em;
     width: 3em;
@@ -198,13 +211,22 @@
     opacity: 0.7;
 }
 
-#add {
+.add {
     position: fixed;
     height: 3em;
     width: 3em;
     top: 30%;
     right: 3em;
     opacity: 0.6;
+}
+
+.mail {
+    position: fixed;
+    height: 3em;
+    width: 3em;
+    top: 40%;
+    right: 3em;
+    opacity: 0.7;
 }
 
 .loginPanel {
@@ -235,14 +257,6 @@
     margin-bottom: 0.5em;
 }
 
-#mail {
-    position: fixed;
-    height: 3em;
-    width: 3em;
-    top: 40%;
-    right: 3em;
-    opacity: 0.7;
-}
 
 #chattingRoom {
     position: fixed;
