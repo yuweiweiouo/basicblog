@@ -1,11 +1,11 @@
 var today = new Date();
 var config = {
-    apiKey: "AIzaSyDIvGlbeFCi3Jo3I9-uNv5qqjHu-qONd3w",
-    authDomain: "my-project-1492012958680.firebaseapp.com",
-    databaseURL: "https://my-project-1492012958680.firebaseio.com",
-    projectId: "my-project-1492012958680",
+    apiKey: "",
+    authDomain: "m",
+    databaseURL: "",
+    projectId: "",
     storageBucket: "",
-    messagingSenderId: "377007134663"
+    messagingSenderId: ""
 };
 firebase.initializeApp(config);
 var database = firebase.database();
